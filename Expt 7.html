@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expt 7</title>
+</head>
+<body>
+    <h1>Experiment 7A</h1>
+    <h2>Append an object in an array and check whether it is an array</h2>
+    <script>
+        
+
+        function insertArr(arr,obj){
+            arr.push(obj);
+            document.write(arr+"<br>");
+        }
+        function isArray(arr){
+            var result = Array.isArray(arr);
+            if(result){
+                document.write("array <br>");
+            }else{
+                document.write("not an array <br>");
+            }
+        }
+
+        var array = [1,2,3,4,5,6];
+        var array1 = [8,9];
+        document.write(array+"<br>");
+        document.write(array1+"<br>");
+
+        insertArr(array,array1);
+        isArray(array1);
+
+    </script>
+
+<h1>Experiment 7B</h1>
+<h2>Append an element in an array using splice method</h2>
+<script>
+    
+    var array = [1,2,3,4,5,6];
+    var elementToadd = 785;
+    var indextoadd = 2;
+    document.write(array+"<br>");
+
+    array.splice(indextoadd,0,elementToadd);
+
+    document.write(array+"<br>");
+
+    
+
+</script>
+</body>
+</html>

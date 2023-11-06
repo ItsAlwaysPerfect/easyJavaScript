@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expt 5</title>
+</head>
+<body>
+    <h1>Experiment 5</h1><br>
+    <h2>Counter</h2><br>
+    <script>
+        var countDownTime = new Date().getTime()+ 60*1000;
+
+        let x=setInterval(function(){
+            let now = new Date().getTime();
+            let leftTime = countDownTime - now;
+            
+            var days = Math.floor(leftTime/(1000*60*60*24));
+            var hours = Math.floor((leftTime/(1000*60*60))%24);
+            var minutes = Math.floor((leftTime/1000/60)%60);
+            var seconds = Math.floor((leftTime/1000)%60);
+
+            document.write(days +"d "+hours +"h "+minutes+ "m "+ seconds+"s <br>");
+
+            if(leftTime<0){
+                clearInterval(x);
+                document.write("count down finished");
+            }
+        },2000);
+    </script>
+</body>
+</html>

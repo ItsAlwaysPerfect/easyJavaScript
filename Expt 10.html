@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expt 10</title>
+</head>
+<body>
+    <h1>Experiment 10</h1>
+    <h2>Form Validation Example</h2>
+    <h1>SignUp Form</h1>
+
+    <form name="myForm" action="thankyou.html" onsubmit="return validate()">
+    <label for="fname">first name</label> 
+    <input type="text" id="fname" name="fname" placeholder="Enter First Name" required>
+    <label for="lname">last name</label>
+    <input type="text" id="lname" name="lname" placeholder="Enter Last Name" required>
+    
+    <p>Gender ? </p>
+    <label for="male">Male</label>
+    <input type="radio" id="male" name="option">
+    <label for="female">Female</label>
+    <input type="radio" id="female" name="option">
+
+    <label for="usrmobile">Mobile Number</label>
+    <input type="text" id="usrmobile" name="usrmobie" placeholder="Enter Mobile Number" required>
+
+    <input type="submit" value="submit">
+    </form>
+
+    
+</body>
+<script>
+    function validate(){
+        var firstName = document.myForm.fname.value;
+        var lastName = document.myForm.lname.value;
+        var usrmobie = document.myForm.usrmobie.value;
+        console.log(firstName);
+        console.log(lastName);
+        console.log(usrmobile);
+        if(firstName == null || firstName == '' || firstName.length<3){
+            alert("First name cant be blank or less than 3 characters");
+            document.myForm.fname.focus();
+            return false;
+        }
+
+        if(lastName == null || lastName == ''){
+            alert("Last Name cant be blank");
+            document.myForm.lname.focus();
+            return false;
+        }
+    }
+
+    
+</script>
+</html>

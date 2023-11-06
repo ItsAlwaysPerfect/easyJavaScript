@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expt 4A</title>
+</head>
+<body>
+    <h1>Experiment 4A</h1><br>
+    <h2>Compare 2 strings Uppercase</h2><br>
+    <script>
+    var str1 = "JavaScript Programs";
+    var str2 = "javascript programS";
+
+    var result = str1.toUpperCase() === str2.toUpperCase();
+
+    if(result){
+        document.write("strings matched");
+    }else{
+        document.write("strings not matched");
+    }
+    </script>
+
+    <h1>Experiment 4B</h1><br>
+    <h2>Compare 2 strings RegExp</h2><br>
+    <script>
+    var str1 = "JavaScript Programs";
+    var str2 = "javascript program";
+
+    var pattern = new RegExp(str1,'gi');
+    var result = pattern.test(str2);
+
+    if(result){
+        document.write("strings matched");
+    }else{
+        document.write("strings not matched");
+    }
+    </script>
+
+    <h1>Experiment 4C</h1><br>
+    <h2>Compare 2 strings localeCompare</h2><br>
+    <script>
+    var str1 = "Javascript programs";
+    var str2 = "javascript programs";
+
+    var result = str1.localeCompare(str2);
+
+    if(result==0){
+        document.write("strings matched");
+    }else{
+        document.write("strings not matched");
+    }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expt 9</title>
+</head>
+<body>
+    <h1>Experiment 9B</h1>
+    <form>
+        <label for="fname">Enter Name</label>
+        <input type="text" id="myInput" onblur="changeColor1()" onfocus="changeColor2()">
+    </form>
+    <script>
+        function changeColor1(){
+            document.getElementById("myInput").style.backgroundColor="red";
+        }
+        function changeColor2(){
+            document.getElementById("myInput").style.backgroundColor="blue";
+        }
+    </script>
+</body>
+</html>

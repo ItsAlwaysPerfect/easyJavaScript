@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expt 3c and 3d</title>
+</head>
+<body>
+    <h1>Experiment 3C and 3D</h1><br>
+    <h2>String and Number Palindrome Check</h2><br>
+
+    <script>
+    var string = prompt("Enter the string: ");
+        var flag = 0;
+        for(let i=0; i<string.length/2;i++){
+            if(string[i]!=string[string.length-1-i]){
+                flag=1;
+            }
+        }
+        if(flag == 0){
+            document.write("Palindrome");
+        }else{
+            document.write("not Palindrome");
+        }
+    
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expt 8A</title>
+</head>
+<body>
+    <h1>Experiment 8A</h1>
+    <h2>Perform Union Operation on set</h2>
+
+    <script>
+        var set1 = new Set(['mango','banana','cherry','grapes']);
+        var set2 = new Set(['mango','kiwi','jackfruit', 'apple']);
+
+        function UnionSet(a,b){
+            let union = new Set(a);
+            for(let i of b){
+                union.add(i);
+            }
+            return union;
+        }
+
+        var result = UnionSet(set1,set2);
+
+        for(i of result.values()){
+            document.write(i+", ");
+        }
+    </script>
+
+    <h1>Experiment 8B</h1>
+    <h2>Perform Intersection Operation on set</h2>
+
+    <script>
+        var set1 = new Set(['mango','banana','cherry','grapes']);
+        var set2 = new Set(['mango','kiwi','jackfruit', 'apple']);
+
+        function IntersectionSet(a,b){
+            let intersection = new Set();
+            for(let i of b){
+                if(a.has(i)){
+                    intersection.add(i);
+                }
+            }
+            return intersection;
+        }
+
+        var result = IntersectionSet(set1,set2);
+
+        for(i of result.values()){
+            document.write(i+", ");
+        }
+    </script>
+
+<h1>Experiment 8C</h1>
+<h2>Perform Difference Operation on set</h2>
+
+<script>
+    var set1 = new Set(['mango','banana','cherry','grapes']);
+    var set2 = new Set(['mango','kiwi','jackfruit', 'apple']);
+
+    function DifferenceSet(a,b){
+        let difference = new Set(a);
+        for(let i of b){
+                difference.delete(i);
+        }
+        return difference;
+    }
+
+    var result = DifferenceSet(set1,set2);
+
+    for(i of result.values()){
+        document.write(i+", ");
+    }
+</script>
+    
+</body>
+</html>

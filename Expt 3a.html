@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expt 3</title>
+</head>
+<body>
+    <h1>Experiment 3A</h1><br>
+    <script>
+        var string = "hello";
+        document.write(string +"<br>");
+        function revstr(str){
+            var revstr = "";
+            for(let i = str.length-1; i>=0; i--)
+            {
+                revstr += str[i];
+            }
+            return revstr;
+        }
+
+        var reverse = revstr(string);
+        document.write(reverse);
+
+    </script>
+</body>
+</html>
